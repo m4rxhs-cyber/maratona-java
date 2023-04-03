@@ -2,7 +2,7 @@ package academy.devdojo.maratonajava.introducao;
 
 public class Operadores {
     public static void main(String[] args) {
-        // + - * /
+        //Operadores aritiméticos: + - * /
         int number01 = 23;
         int number02 = 45;
         int plus = number01 + number02;
@@ -19,7 +19,7 @@ public class Operadores {
         int resto = 20 % 2;
         System.out.println(resto);
 
-        // Operadores comparação: < > <= >= == !=
+        // Operadores de comparação: < > <= >= == !=
         // Eles sempre irão trazer valores booleando: true ou false
 
         boolean isDezMenorQueVinte = 10 < 20;
@@ -29,23 +29,55 @@ public class Operadores {
         boolean isDezIgualQueVinte = 10 == 20;
         boolean isDezDiferenteQueVinte = 10 != 20;
 
-        System.out.println("isDezMenorQueVinte: "+isDezMenorQueVinte);
-        System.out.println("isDezMaiorQueVinte: "+isDezMaiorQueVinte);
-        System.out.println("isDezMaiorIgualQueVinte: "+isDezMaiorIgualQueVinte);
-        System.out.println("isDezMenorIgualQueVinte: "+isDezMenorIgualQueVinte);
-        System.out.println("isDezIgualQueVinte: "+isDezIgualQueVinte);
-        System.out.println("isDezDiferenteQueVinte: "+isDezDiferenteQueVinte);
+        System.out.println("isDezMenorQueVinte: " + isDezMenorQueVinte);
+        System.out.println("isDezMaiorQueVinte: " + isDezMaiorQueVinte);
+        System.out.println("isDezMaiorIgualQueVinte: " + isDezMaiorIgualQueVinte);
+        System.out.println("isDezMenorIgualQueVinte: " + isDezMenorIgualQueVinte);
+        System.out.println("isDezIgualQueVinte: " + isDezIgualQueVinte);
+        System.out.println("isDezDiferenteQueVinte: " + isDezDiferenteQueVinte);
 
         //Operadores Lógicos: && (AND) || (OR)
 
-        //AND
+        //AND (&&)
+        //Contexto: Certo país, cria uma lei que se você tiver mais que 30 anos, deverá ganhar um salário de no mínimo $4612.
+        // Ou então, se você tiver menos que 30 anos, deverá ganhar no mínimo 3338.
         int idade = 34;
         float salario = 3500F;
-        boolean isDentroDaLeiMaiorQueTrinta = idade > 30 && salario >= 4612;
+        boolean isDentroDaLeiMaiorQueTrinta = idade >= 30 && salario >= 4612;
         boolean isDentroDaLeiMenorQueTrinta = idade < 30 && salario >= 3338;
 
-        System.out.println("isDentroDaLeiMaiorQueTrinta: "+ isDentroDaLeiMaiorQueTrinta);
-        System.out.println("isDentroDaLeiMenorQueTrinta: "+ isDentroDaLeiMenorQueTrinta);
+        System.out.println("isDentroDaLeiMaiorQueTrinta: " + isDentroDaLeiMaiorQueTrinta);
+        System.out.println("isDentroDaLeiMenorQueTrinta: " + isDentroDaLeiMenorQueTrinta);
 
+
+        //OR (||)
+        //Contexto: Você tem duas contas bancárias e quer comprar um Play Station 5.
+        double saldoContaBancaria01 = 23434D;
+        double saldoContaBancaria02 = 5459D;
+        float valorPlaystationCinco = 4589F;
+        boolean isPlaystationCincoCompravel = saldoContaBancaria01 > valorPlaystationCinco || saldoContaBancaria02 > valorPlaystationCinco;
+
+        System.out.println("isPlaystationCincoCompravel: " + isPlaystationCincoCompravel);
+
+        //Operadores de atribuição: = += -= *= /= %=
+        double salarioMensal = 1312;
+        double bonus = 1000;
+
+        System.out.println("salarioMensal: " + salarioMensal);
+
+        salarioMensal += bonus; //2312
+        System.out.println("salarioMensal: " + salarioMensal);
+
+        salarioMensal -= bonus; //1312
+        System.out.println("salarioMensal: " + salarioMensal);
+
+        salarioMensal *= bonus; //1312000
+        System.out.println("salarioMensal: " + salarioMensal);
+
+        salarioMensal /= bonus; //1312
+        System.out.println("salarioMensal: " + salarioMensal);
+
+        salarioMensal %= bonus; //312
+        System.out.println("salarioMensal: " + salarioMensal);
     }
 }
